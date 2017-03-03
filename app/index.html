@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Angular TODO</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+</head>
+
+<body ng-app="ngTodo">
+    <ui-view></ui-view>
+
+    <!-- angular feature scripts -->
+    <script src="ngTodo/ngTodo.module.js"></script>
+    <script src="ngTodo/features/listTodo/listTodo.module.js"></script>
+    <script src="ngTodo/features/listTodo/listTodo.controller.js"></script>
+    <script src="ngTodo/features/listTodo/listTodo.route.js"></script>
+    <script src="ngTodo/features/createTodo/createTodo.module.js"></script>
+    <script src="ngTodo/features/createTodo/createTodo.controller.js"></script>
+    <script src="ngTodo/features/createTodo/createTodo.route.js"></script>
+    <script src="ngTodo/features/completeTodo/completeTodo.module.js"></script>
+    <script src="ngTodo/features/completeTodo/completeTodo.controller.js"></script>
+    <script src="ngTodo/features/completeTodo/completeTodo.route.js"></script>
+</body>
+
+</html>

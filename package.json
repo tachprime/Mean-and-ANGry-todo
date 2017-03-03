@@ -1,0 +1,31 @@
+{
+  "name": "angry-todo",
+  "version": "1.0.0",
+  "description": "A Todo list using a full MEAN stack with angular 1",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tachprime/Mean-and-ANGry-todo.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "Express",
+    "MongoDB",
+    "ToDo"
+  ],
+  "author": "Alex Rivera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tachprime/Mean-and-ANGry-todo/issues"
+  },
+  "homepage": "https://github.com/tachprime/Mean-and-ANGry-todo#readme",
+  "dependencies": {
+    "express": "4.15.0",
+    "mongoose": "4.8.5",
+    "morgan": "^1.8.1"
+  }
+}
