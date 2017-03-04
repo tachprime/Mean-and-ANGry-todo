@@ -3,7 +3,8 @@ angular
         'ui.router',
         'ngTodo.listTodo',
         'ngTodo.createTodo',
-        'ngTodo.completeTodo'
+        'ngTodo.completeTodo',
+        'ngTodo.component.navbar'
     ])
     .config(appConfig);
 
