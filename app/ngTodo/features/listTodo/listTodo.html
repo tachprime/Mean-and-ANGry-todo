@@ -6,8 +6,8 @@
             </div>
             <div class="panel-body">
                 <ul ng-repeat="todo in ListVM.todos">
-                    <!--<todo-item todo-data="ListVM.todos"></todo-item>-->
-                    <li class="list-group-item">
+                    <!--<todo-item todo-data="todo"></todo-item>-->
+                    <li ng-if="todo.dueDate < ListVM.currentDate.toISOString()" class="list-group-item">
                         <span class="col-lg-10">{{todo.todo}}</span>
                         <input class="col-lg-2 right" type="checkbox" name="complete" value="">
                         <label for="complete">Complete</label>
@@ -23,7 +23,14 @@
                 <h3 class="panel-title"><strong>Due today</strong></h3>
             </div>
             <div class="panel-body">
-                Todo Item component will go here later...
+                <ul ng-repeat="todo in ListVM.todos">
+                    <!--<todo-item todo-data="todo"></todo-item>-->
+                    <li ng-if="todo.dueDate == ListVM.currentDate.toISOString()" class="list-group-item">
+                        <span class="col-lg-10">{{todo.todo}}</span>
+                        <input class="col-lg-2 right" type="checkbox" name="complete" value="">
+                        <label for="complete">Complete</label>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -34,7 +41,14 @@
                 <h3 class="panel-title"><strong>Due Later</strong></h3>
             </div>
             <div class="panel-body">
-                Todo Item component will go here later...
+                <ul ng-repeat="todo in ListVM.todos">
+                    <!--<todo-item todo-data="todo"></todo-item>-->
+                    <li ng-if="todo.dueDate > ListVM.currentDate.toISOString()" class="list-group-item">
+                        <span class="col-lg-10">{{todo.todo}}</span>
+                        <input class="col-lg-2 right" type="checkbox" name="complete" value="">
+                        <label for="complete">Complete</label>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

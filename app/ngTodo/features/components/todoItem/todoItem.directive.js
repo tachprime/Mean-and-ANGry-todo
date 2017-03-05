@@ -12,13 +12,22 @@ function TodoItem() {
         controller: TodoItemCtrl,
         controllerAS: 'TodoVM',
         bindToController: true,
+        link: function(scope) {
+            console.log(scope.todoData);
+        }
     };
 }
 
 function TodoItemCtrl($scope) {
     var vm = this;
 
-    console.log($scope.todoData);
-
+    vm.todoData = 'Hello';
+    $scope.$watch(function () {
+        return vm.todoData;
+    }, function (newValue, oldValue) {
+        if (newValue !== oldValue) {
+            vm.todoData = newValue;
+        }
+    });
     console.log(vm);
 }

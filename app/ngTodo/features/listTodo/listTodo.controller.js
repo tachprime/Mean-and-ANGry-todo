@@ -5,9 +5,11 @@ angular
 function ListTodoCtrl($http) {
     var vm = this;
 
-    console.log(vm);
+    //get current Date & remove time to compare to Due dates
+    var currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
 
-    vm.greeting = "hello";
+    vm.currentDate = currentDate;
     vm.todos = [];
 
     $http
@@ -21,8 +23,7 @@ function ListTodoCtrl($http) {
                     response.data[i]._id
                 ));
             }
-            
-            console.log(vm.todos);
+
         });
     
 }
