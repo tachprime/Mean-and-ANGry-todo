@@ -6,7 +6,7 @@ const port = 3400;
 const bodyParser = require('body-parser');
 const api = require('./api/route/apiRoute');
 
-app.use(logger('dev'));
+app.use(logger('common'));
 app.use(express.static(__dirname + "/app"));
 
 app.use(bodyParser.json());

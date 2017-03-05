@@ -14,7 +14,7 @@ function ListTodoCtrl($http, $scope) {
     vm.todos = [];
 
     //update completed todos
-    vm.updateCompleted = updateCompleted;
+    //vm.updateCompleted = updateCompleted;
 
     $http
         .get('/api')
@@ -31,15 +31,15 @@ function ListTodoCtrl($http, $scope) {
 
         });
 
-    function updateCompleted(todo) {
-        //console.log("i was clicked");
-        $http.put('/api', todo)
-            .then(function (res) {
-                console.log(res);
-            }, function (err) {
-                console.log(err);
-            });
-    }
+    // function updateCompleted(todo) {
+    //     //console.log("i was clicked");
+    //     $http.put('/api', todo)
+    //         .then(function (res) {
+    //             console.log(res);
+    //         }, function (err) {
+    //             console.log(err);
+    //         });
+    // }
 }
 
 function Todo(todo, dueDate, completed, id) {

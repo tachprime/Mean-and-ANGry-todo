@@ -23,7 +23,7 @@ function CreateTodoCtrl($http) {
         $http.post('/api',
             newTodo
         ).then(function (response) {
-            console.log(response);
+            console.log("new Todo added");
         }).catch(function (err) {
             console.log(err);
         });
