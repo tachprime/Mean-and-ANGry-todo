@@ -30,7 +30,14 @@ router.put('/', (req, res) => {
 
     console.log(text);
 
-    res.status(200).json({ fromApi: text });
+    Todo.update({ _id: req.body._id }, { $set: { completed: req.body.completed } },{new: false}, function(err, data) {
+        if (err) console.log(err);
+        
+        console.log(data);
+
+        res.json(data);
+    });
+
 });
 
 module.exports = router;
