@@ -6,9 +6,9 @@ function Navbar() {
     return {
         restrict: 'E',
         scope: {
-            bookData: '@'
+            navData: '@'
         },
-        templateUrl: '/ngTodo/features/component/navbar/navbar.html',
+        templateUrl: '/ngTodo/features/components/navbar/navbar.html',
         controller: NavbarCtrl,
         controllerAs: 'NavbarM',
         bindToController: true

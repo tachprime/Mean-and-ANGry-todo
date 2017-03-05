@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <base href="/"/>
+    <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 
@@ -23,7 +23,9 @@
 </head>
 
 <body ng-app="ngTodo">
+    <!-- navbar component shared by all states -->
     <navbar></navbar>
+    <!-- main view for presenting all states -->
     <ui-view></ui-view>
 
     <!-- main module -->
@@ -39,8 +41,10 @@
     <script src="ngTodo/features/completeTodo/completeTodo.controller.js"></script>
     <script src="ngTodo/features/completeTodo/completeTodo.route.js"></script>
     <!-- app components -->
-    <script src="ngTodo/features/component/navbar/navbar.module.js"></script>
-    <script src="ngTodo/features/component/navbar/navbar.directive.js"></script>
+    <script src="ngTodo/features/components/navbar/navbar.module.js"></script>
+    <script src="ngTodo/features/components/navbar/navbar.directive.js"></script>
+    <script src="ngTodo/features/components/todoItem/todoItem.module.js"></script>
+    <script src="ngTodo/features/components/todoItem/todoItem.directive.js"></script>
 </body>
 
 </html>

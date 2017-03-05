@@ -1,2 +1,4 @@
 angular
-    .module('ngTodo.listTodo', []);
+    .module('ngTodo.listTodo', [
+        'ngTodo.component.todoItem'
+    ]);

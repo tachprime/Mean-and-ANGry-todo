@@ -4,7 +4,7 @@ const app = express();
 const logger = require('morgan');
 const port = 3400;
 const bodyParser = require('body-parser');
-const api = require('./route/apiRoute');
+const api = require('./api/route/apiRoute');
 
 app.use(logger('dev'));
 app.use(express.static(__dirname + "/app"));
