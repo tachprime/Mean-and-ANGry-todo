@@ -1,2 +1,4 @@
 angular
-    .module('ngTodo.completeTodo', []);
+    .module('ngTodo.completeTodo', [
+        'ngTodo.component.todoItem'
+    ]);

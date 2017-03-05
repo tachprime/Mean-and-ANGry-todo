@@ -2,7 +2,24 @@
     <div class="row col-lg-10 col-lg-offset-1">
         <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">Overdue</h3>
+                <h3 class="panel-title"><strong>Overdue</strong></h3>
+            </div>
+            <div class="panel-body">
+                <ul ng-repeat="todo in ListVM.todos">
+                    <todo-item todo-data="ListVM.todos"></todo-item>
+                    <!--<li class="list-group-item">
+                        <span class="col-lg-10">{{ListVM.todos[item].todo}}</span>
+                        <input class="col-lg-2 right" type="checkbox" name="complete" value="">
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row col-lg-10 col-lg-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Due today</strong></h3>
             </div>
             <div class="panel-body">
                 Todo Item component will go here later...
@@ -11,25 +28,14 @@
     </div>
 
     <div class="row col-lg-10 col-lg-offset-1">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title">Due today</h3>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Due Later</strong></h3>
+            </div>
+            <div class="panel-body">
+                Todo Item component will go here later...
+            </div>
         </div>
-        <div class="panel-body">
-            Todo Item component will go here later...
-        </div>
-    </div>
-    </div>
-
-    <div class="row col-lg-10 col-lg-offset-1">
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <h3 class="panel-title">Due Later</h3>
-        </div>
-        <div class="panel-body">
-            Todo Item component will go here later...
-        </div>
-    </div>
     </div>
 
 </div>
