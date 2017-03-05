@@ -4,6 +4,10 @@ angular
 
 function ListTodoCtrl($http) {
     var vm = this;
+
+    console.log(vm);
+
+    vm.greeting = "hello";
     vm.todos = [];
 
     $http
@@ -20,12 +24,11 @@ function ListTodoCtrl($http) {
             
             console.log(vm.todos);
         });
-
-    function Todo(todo, dueDate, id) {
-        this.todo = todo;
-        this.dueDate = dueDate;
-        this._id = id;
-    }
-
     
+}
+
+function Todo(todo, dueDate, id) {
+    this.todo = todo;
+    this.dueDate = dueDate;
+    this._id = id;
 }

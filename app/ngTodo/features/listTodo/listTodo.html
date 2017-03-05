@@ -6,11 +6,12 @@
             </div>
             <div class="panel-body">
                 <ul ng-repeat="todo in ListVM.todos">
-                    <todo-item todo-data="ListVM.todos"></todo-item>
-                    <!--<li class="list-group-item">
-                        <span class="col-lg-10">{{ListVM.todos[item].todo}}</span>
+                    <!--<todo-item todo-data="ListVM.todos"></todo-item>-->
+                    <li class="list-group-item">
+                        <span class="col-lg-10">{{todo.todo}}</span>
                         <input class="col-lg-2 right" type="checkbox" name="complete" value="">
-                    </li>-->
+                        <label for="complete">Complete</label>
+                    </li>
                 </ul>
             </div>
         </div>
