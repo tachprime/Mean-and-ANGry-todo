@@ -1,6 +1,7 @@
 <li class="list-group-item">
-    <span class="col-lg-10">{{TodoVM.todoData.todo}}</span>
+    <span class="col-lg-10">{{todoData.todo}}</span>
     
-    <input class="col-lg-2 right" type="checkbox" name="complete" value="">
+    <input ng-model="todoData.completed" ng-change="updateCompleted(todoData)" class="col-lg-2 right" type="checkbox" name="completed"
+    value="">
     <label for="complete">Complete</label>
 </li>
