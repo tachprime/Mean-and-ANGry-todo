@@ -10,7 +10,7 @@ function Navbar() {
         },
         templateUrl: '/ngTodo/features/components/navbar/navbar.html',
         controller: NavbarCtrl,
-        controllerAs: 'NavbarM',
+        controllerAs: 'NavbarVM',
         bindToController: true
     };
 }
