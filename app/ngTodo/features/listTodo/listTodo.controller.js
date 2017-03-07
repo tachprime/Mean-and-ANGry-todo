@@ -2,34 +2,14 @@ angular
     .module('ngTodo.listTodo')
     .controller('ListTodoCtrl', ListTodoCtrl);
 
-function ListTodoCtrl($http, $scope) {
+function ListTodoCtrl(todoApi) {
     var vm = this;
     vm.currentDate = getTodaysDate();
 
     //hold all todos
     vm.todos = [];
 
-    $http
-        .get('/api')
-        .then(function (response) {
-
-            for (var i = 0; i < response.data.length; i++) {
-                vm.todos.push(new Todo(
-                    response.data[i].todo,
-                    response.data[i].dueDate,
-                    response.data[i].completed,
-                    response.data[i]._id
-                ));
-            }
-
-        });
-}
-
-function Todo(todo, dueDate, completed, id) {
-    this.todo = todo;
-    this.dueDate = dueDate;
-    this.completed = completed;
-    this._id = id;
+    todoApi.getTodos(vm.todos);
 }
 
 function getTodaysDate() {

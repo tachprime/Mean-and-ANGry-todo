@@ -5,7 +5,8 @@ angular
         'ngTodo.createTodo',
         'ngTodo.completeTodo',
         'ngTodo.component.navbar',
-        'ngTodo.component.todoItem'
+        'ngTodo.component.todoItem',
+        'ngTodo.service.todoApi'
     ])
     .config(appConfig);
 

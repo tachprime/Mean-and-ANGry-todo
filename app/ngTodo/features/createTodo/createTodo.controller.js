@@ -2,7 +2,7 @@ angular
     .module('ngTodo.createTodo')
     .controller('CreateTodoCtrl', CreateTodoCtrl);
 
-function CreateTodoCtrl($http) {
+function CreateTodoCtrl(todoApi) {
     var vm = this;
 
     vm.todo = '';
@@ -17,15 +17,9 @@ function CreateTodoCtrl($http) {
             dueDate: vm.dueDate
         };
 
-        $http.post('/api',
-            newTodo
-        ).then(function (response) {
-            console.log("new Todo added");
-        }).catch(function (err) {
-            console.log(err);
-        });
+        todoApi.addTodo(newTodo);
 
-        //reset form to blank after submission
+        //reset form
         vm.todo = '';
         vm.dueDate = '';
     }
