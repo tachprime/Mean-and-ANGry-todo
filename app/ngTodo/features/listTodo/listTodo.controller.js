@@ -4,17 +4,10 @@ angular
 
 function ListTodoCtrl($http, $scope) {
     var vm = this;
-
-    //get current Date & remove time to compare to Due dates
-    var currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0);
-    vm.currentDate = currentDate;
+    vm.currentDate = getTodaysDate();
 
     //hold all todos
     vm.todos = [];
-
-    //update completed todos
-    //vm.updateCompleted = updateCompleted;
 
     $http
         .get('/api')
@@ -30,16 +23,6 @@ function ListTodoCtrl($http, $scope) {
             }
 
         });
-
-    // function updateCompleted(todo) {
-    //     //console.log("i was clicked");
-    //     $http.put('/api', todo)
-    //         .then(function (res) {
-    //             console.log(res);
-    //         }, function (err) {
-    //             console.log(err);
-    //         });
-    // }
 }
 
 function Todo(todo, dueDate, completed, id) {
@@ -47,5 +30,12 @@ function Todo(todo, dueDate, completed, id) {
     this.dueDate = dueDate;
     this.completed = completed;
     this._id = id;
+}
+
+function getTodaysDate() {
+    //get current Date & remove time to compare to only dates
+    var currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+    return currentDate;
 }
 
