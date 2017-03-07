@@ -10,10 +10,7 @@ function CreateTodoCtrl($http) {
     vm.status = '';
     vm.addTodo = addTodo;
 
-    function addTodo(todo, dueDate) {
-
-        vm.todo = todo;
-        vm.dueDate = dueDate;
+    function addTodo() {
 
         var newTodo = {
             todo: vm.todo,

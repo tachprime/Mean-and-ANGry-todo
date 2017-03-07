@@ -19,13 +19,13 @@ function TodoItemCtrl($scope, $http) {
     var vm = this;
 
     $scope.updateCompleted = updateCompleted;
-    vm.todoData= [];
+    vm.todoData = [];
 
-    $scope.$watch(function() {
+    $scope.$watch(function () {
         return vm.todoData;
-    }, function(newValue, oldValue) {
-        if(newValue) {
-            vm.todoData = newValue; 
+    }, function (newValue, oldValue) {
+        if (newValue) {
+            vm.todoData = newValue;
             $scope.todoData = vm.todoData;
         }
     });
@@ -35,11 +35,13 @@ function TodoItemCtrl($scope, $http) {
     function updateCompleted(todo) {
         console.log("i was clicked");
         console.log(todo);
-        $http.put('/api', todo)
-            .then(function (res) {
-                console.log(res);
-            }, function (err) {
-                console.log(err);
-            });
+
+        $http.put('/api',
+            todo
+        ).then(function (res) {
+            console.log(res);
+        }, function (err) {
+            console.log(err);
+        });
     }
 }

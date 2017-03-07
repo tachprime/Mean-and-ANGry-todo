@@ -8,9 +8,6 @@
                 <ul ng-repeat="todo in ListVM.todos">
                     <span ng-if="todo.dueDate < ListVM.currentDate.toISOString() && todo.completed !== true">
                         <todo-item todo-data="todo"></todo-item>
-                        <!--<span class="col-lg-10">{{todo.todo}}</span>
-                        <input ng-model="todo.completed" ng-change="ListVM.updateCompleted(todo)" class="col-lg-2 right" type="checkbox" name="complete" value="">
-                        <label for="complete">Complete</label>-->
                     </span>
                 </ul>
             </div>
@@ -26,9 +23,6 @@
                 <ul ng-repeat="todo in ListVM.todos">
                     <span ng-if="todo.dueDate == ListVM.currentDate.toISOString() && todo.completed !== true">
                         <todo-item todo-data="todo"></todo-item>
-                        <!--<span class="col-lg-10">{{todo.todo}}</span>
-                        <input ng-model="todo.completed" ng-change="ListVM.updateCompleted(todo)" class="col-lg-2 right" type="checkbox" name="complete" value="">
-                        <label for="complete">Complete</label>-->
                     </span>
                 </ul>
             </div>
@@ -42,12 +36,8 @@
             </div>
             <div class="panel-body">
                 <ul ng-repeat="todo in ListVM.todos">
-                    
                     <span ng-if="todo.dueDate > ListVM.currentDate.toISOString() && todo.completed !== true">
                         <todo-item todo-data="todo"></todo-item>
-                        <!--<span class="col-lg-10">{{todo.todo}}</span>
-                        <input ng-model="todo.completed" ng-change="ListVM.updateCompleted(todo)" class="col-lg-2 right" type="checkbox" name="completed" value="">
-                        <label for="complete">Complete</label>-->
                     </span>
                 </ul>
             </div>
