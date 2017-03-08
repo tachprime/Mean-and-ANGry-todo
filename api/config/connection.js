@@ -4,7 +4,7 @@ const promise = require('bluebird');
 
 mongoose.Promise = promise;
 
-mongoose.connect('mongodb://localhost/todos');
+mongoose.connect('mongodb://heroku_9gks4stp:cpt0q0eq63144pph0u319ie0qc@ds137729.mlab.com:37729/heroku_9gks4stp');
 
 const db = mongoose.connection;
 
