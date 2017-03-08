@@ -4,7 +4,7 @@ const promise = require('bluebird');
 
 mongoose.Promise = promise;
 
-mongoose.connect('mongodb://localhost/todos');
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 
