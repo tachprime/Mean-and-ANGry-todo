@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const logger = require('morgan');
-const port = 3400;
+const port = process.env.PORT || 3400;
 const bodyParser = require('body-parser');
 const api = require('./api/route/apiRoute');
 
